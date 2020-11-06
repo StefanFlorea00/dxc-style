@@ -1,0 +1,248 @@
+:root {
+  --color-primary: #6f2c91;
+  --black: #000000;
+  --bg-gray: #666666;
+  --bg-light-gray: #f8f7f7;
+  --bg-dark-gray: #1f2020;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-ipadL: 1024px;
+  --breakpoint-nb-font-lg: 1232px;
+  --primary-font: "GTWalsheimProRegular", Arial, sans-serif;
+  --primary-font-bold: "GTWalsheimProBold", Arial, sans-serif;
+  --primary-font-color: #212529;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "GTWalsheimProRegular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/GT-Walsheim-Pro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GTWalsheimProRegular";
+  font-weight: 600;
+  font-style: normal;
+  src: url("/fonts/GT-Walsheim-Pro-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GTWalsheimProRegular";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/GT-Walsheim-Pro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GTWalsheimProBold";
+  font-weight: 600;
+  font-style: normal;
+  src: url("/fonts/GT-Walsheim-Pro-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GTWalsheimProLight";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/GT-Walsheim-Pro-Light.ttf") format("truetype");
+}
+
+/* PAGE */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  margin-bottom: 100px;
+}
+
+.bg-gray {
+  background-color: var(--bg-light-gray);
+  padding: 5rem 0;
+  font-size: 1.25rem;
+}
+
+/* TEXT */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+h2,
+.h2 {
+  font-size: 2rem;
+}
+h3,
+.h3 {
+  font-size: 1.75rem;
+}
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+/* BUTTON */
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  line-height: 187.5%;
+  border-radius: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6f2c91;
+  border-color: #6f2c91;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #6f2c91;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+  outline: none;
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--black);
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+/* LINK */
+
+.link.link-hover-border {
+  position: relative;
+  color: inherit;
+  text-transform: uppercase;
+  padding: 0;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.link.link-hover-border:hover,
+.link.link-hover-border:active,
+.link.link-hover-border:focus {
+  outline: none;
+  text-decoration: none;
+}
+.link.link-hover-border:hover:after,
+.link.link-hover-border:active:after,
+.link.link-hover-border:focus:after {
+  left: 100%;
+}
+.link.link-hover-border:before,
+.link.link-hover-border:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.1875rem);
+  z-index: -1;
+  display: block;
+  height: 0.1875rem;
+}
+.link.link-hover-border:before {
+  background-color: #000;
+}
+.link.link-hover-border:after {
+  background-color: #0067b3;
+  transition: all 0.3s;
+}
+
+.link.no-border:before,
+.link.no-border:after {
+  right: 100%;
+}
+
+.link.no-border:before {
+  background-color: transparent;
+}
+
+.link.no-border:after {
+  background-color: transparent;
+}
+
+.link.no-border:hover:after {
+  background-color: #000;
+}
+
+.link.no-border:hover:after,
+.link.no-border:active:after,
+.link.no-border:focus:after {
+  right: 0%;
+  left: 0%;
+}

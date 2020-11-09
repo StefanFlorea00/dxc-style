@@ -6,12 +6,21 @@ document.querySelector("#chat-send").addEventListener("click", function () {
     document.querySelector("#user-text").value = "";
   }
 });
+document.querySelector("#user-text").addEventListener("keydown", enterText);
+
 const template = document.querySelector("#chat-line").content;
 
 let chatShown = false;
 
 function sendIntroMessage() {
   botSendMessage("Hi, if you need help don't hesitate to ask!");
+}
+
+function enterText(e) {
+  if (e.keyCode == 13) {
+    userSendMessage(this.value);
+    this.value = "";
+  }
 }
 
 function showChat() {

@@ -320,12 +320,20 @@ h6,
 .chat-line {
   display: flex;
   width: 100%;
-  padding: 5px 10px;
+  padding: 0px 5px;
   animation: chat-line-anim 0.3s linear;
 }
 
 .chat-line.user {
   justify-content: flex-end;
+}
+
+.chat-line.user p {
+  background-color: lightblue;
+}
+
+.chat-line.user .chat-img {
+  background-color: red;
 }
 
 .chat-img {
@@ -339,6 +347,9 @@ h6,
 .chat-line p {
   margin-left: 10px;
   max-width: 80%;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
 
 .chat-send-btn {

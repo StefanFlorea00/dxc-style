@@ -264,6 +264,11 @@ h6,
   background-color: blue;
   cursor: pointer;
   position: relative;
+  transition: 0.3s all;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
 }
 
 .chat-box {
@@ -337,8 +342,8 @@ h6,
 }
 
 .chat-send-btn {
-  border-right: solid 3px black;
-  border-bottom: solid 3px black;
+  border-right: solid 5px darkgray;
+  border-bottom: solid 5px darkgray;
   width: 20px;
   height: 20px;
   transform: rotate(-45deg);
@@ -367,7 +372,7 @@ h6,
 
 @keyframes chat-box-anim {
   from {
-    transform: scaleY(0.7);
+    transform: scaleY(0.7) translateY(10px);
     opacity: 0;
   }
   to {

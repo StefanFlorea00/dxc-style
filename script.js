@@ -37,7 +37,7 @@ function botSendMessage(message) {
   line.querySelector("#chat-line-text").textContent = message;
 
   document.querySelector(".chat-text").appendChild(line);
-  document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-box").scrollHeight;
+  document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
 }
 
 function userSendMessage(message) {
@@ -47,5 +47,5 @@ function userSendMessage(message) {
   line.querySelector(".chat-line").classList.add("user");
 
   document.querySelector(".chat-text").appendChild(line);
-  document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-box").scrollHeight;
+  document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
 }

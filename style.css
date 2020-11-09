@@ -1,5 +1,6 @@
 :root {
   --color-primary: #6f2c91;
+  --color-secondary: #0067B3;
   --black: #000000;
   --bg-gray: #666666;
   --bg-light-gray: #f8f7f7;
@@ -98,17 +99,17 @@ h6,
 .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 1200;
   line-height: 1.2;
   color: inherit;
 }
 h1,
 .h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
 }
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 h3,
 .h3 {
@@ -245,4 +246,164 @@ h6,
 .link.no-border:focus:after {
   right: 0%;
   left: 0%;
+}
+
+/* starting on general style - SB */
+
+/* styling for the header */
+/* styling for the header */
+/* styling for the header */
+
+
+.picture-header > img {
+  width: 100%;
+}
+
+.text-wrapper {
+  background-color: var(--color-secondary);
+  width: 50vw;
+  height: 40vh;
+  position: relative;
+  top: -30vh;
+  left: 25vw;
+  color: white;
+  font-family: var(--primary-font-bold);
+  padding: 0 4em 0 6.5em;
+}
+
+.text-wrapper > img {
+  width: 40%;
+  position: relative;
+  left: -6em;
+}
+
+.text-wrapper > h1 {
+  text-align: left;
+  font-weight: 900;
+}
+
+/* styling for the first section */
+
+section {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.brochure {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.purple-wrapper {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 2em;
+  height: 100%;
+  position: relative;
+  top: -20vh;
+  left: -5vw;
+}
+
+.project-partner {
+  width: 40vw;
+}
+
+/* styling for the second section */
+
+.testimonials > h2 {
+  text-align: center;
+}
+
+div.tri-picture {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.wrapper-hover {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.content-hover {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  color: white;
+  display: none;
+  justify-content: center;
+}
+
+.wrapper-hover:hover > .content-hover {
+  display: flex;
+  flex-flow: column;
+  animation: 0.2s comingup ease-out forwards;
+
+}
+
+@keyframes comingup {
+  from {transform: scaleY(0)};
+  to {transform: scaleY(1);}
+}
+
+.content-hover > p, .content-hover > h3 {
+  position: relative;
+  align-self: center;
+}
+
+.background-hover {
+  grid-column: 1;
+  grid-row: 1;
+  width: 20vw;
+  height: auto;
+}
+
+.text-wrapper-blue {
+  background-color: var(--color-secondary);
+  color: white;
+  height: 15vh;
+  padding: 2em;
+}
+
+/* styling for the third section */
+
+.tjeklisten {
+  display: flex;
+  flex-flow: row;
+}
+
+.wrapper-with-button {
+  display: flex;
+  flex-flow: column;
+  padding: 2em;
+}
+
+.wrapper-with-button > a {
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+}
+
+/* styling for the fourth section */
+
+.video-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.wrapper-no-btn {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 2em;
+}
+
+/* styling for the fifth section */
+
+.text-wrapper-purple {
+  background-color: var(--color-primary);
+  color: white;
 }

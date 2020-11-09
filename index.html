@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg-gray">
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
-      <p>this is text</p>
-    </div>
-
-    <div>
-      <a href="" class="btn btn-primary">Explore Our Customer Stories</a>
-      <a href="" class="btn btn-secondary">Explore Our Customer Stories</a>
-    </div>
-
-    <div>
-      <a class="link link-hover-border" href="/cr?ref=dhpbb_au">Corporate Responsibility</a>
-      <a class="link link-hover-border no-border" href="/cr?ref=dhpbb_au">Corporate Responsibility</a>
+    <div class="chat-wrapper">
+      <div class="chat-bubble" id="chat"></div>
+      <div class="chat-box hidden">
+        <div class="chat-bar">
+          <p>Chat</p>
+          <span class="chat-close" id="chat-close">&times;</span>
+        </div>
+        <div class="chat-text">
+          <template id="chat-line">
+            <div class="chat-line">
+              <div class="chat-img"></div>
+              <p id="chat-line-text">Hello!</p>
+            </div>
+          </template>
+        </div>
+        <div class="chat-bar bottom">
+          <input class="chat-bar-input" type="text" id="user-text" />
+          <div class="chat-send-btn" id="chat-send"></div>
+        </div>
+      </div>
     </div>
   </body>
-  <script src=""></script>
+  <script src="script.js"></script>
 </html>

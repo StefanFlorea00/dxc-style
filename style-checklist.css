@@ -1,0 +1,103 @@
+.question-wrapper {
+    background-color: var(--color-primary);
+    color: white;
+    border: solid 2px white;
+    height: 8vh;
+    padding: 1em;
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    cursor: pointer;
+
+}
+
+#button-home {
+    margin: 1em;
+    position: absolute;
+    top: 55vh;
+    justify-items: center;
+}
+
+#button-home > a {
+    padding-left: 0.5em;
+    color: black;
+    text-decoration: none;
+}
+
+#button-home:hover > a {
+    color: black;
+    text-decoration: underline;
+}
+
+.home-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    height: 4px;
+
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.hidden-checklist {
+    background-color: var(--bg-light-gray);
+    padding: 2em;
+    margin: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    padding: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.rotated {
+    animation: rotating 0.3s ease-out forwards;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);  
+    }
+
+    to {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);  
+    }
+}
+
+.appearing {
+    display:block;
+    animation: appearing 0.3s ease-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes appearing {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}

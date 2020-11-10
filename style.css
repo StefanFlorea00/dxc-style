@@ -150,6 +150,7 @@ h6,
   font-weight: 600;
   color: #212529;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -180,8 +181,8 @@ h6,
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #fff;
-  border-color: #6f2c91;
+  background-color: var(--color-primary);
+  border-color: #fff;
 }
 
 .btn.btn-primary:hover,
@@ -370,7 +371,7 @@ h6,
 
 header {
   scroll-snap-align: center;
-  height: 100%;
+  height: 80vh;
   position: sticky;
 }
 .picture-header > img {

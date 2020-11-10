@@ -75,6 +75,25 @@ body {
   background-color: #fff;
 }
 
+html,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  position: sticky;
+  scroll-snap-align: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 10vh;
+}
+
 .hidden {
   display: none;
 }
@@ -142,8 +161,8 @@ h6,
   font-size: 1rem;
   line-height: 187.5%;
   border-radius: 0;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -349,6 +368,11 @@ h6,
 /* styling for the header */
 /* styling for the header */
 
+header {
+  scroll-snap-align: center;
+  height: 100%;
+  position: sticky;
+}
 .picture-header > img {
   width: 100%;
 }
@@ -381,16 +405,24 @@ h6,
 
 /* styling for the first section */
 
-section {
+/* section {
+  padding-top: 15vh;
+  margin-top: 20vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 10vh;
-}
+} */
 
 .brochure {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
+
+  padding-top: 15vh;
+  margin-top: 20vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 10vh;
 }
 
 .purple-wrapper {
@@ -453,15 +485,17 @@ div.tri-picture {
 .wrapper-hover:hover > .content-hover {
   display: flex;
   flex-flow: column;
-  animation: 0.2s comingup ease-out forwards;
+  animation: 0.25s comingup ease-out forwards;
 }
 
 @keyframes comingup {
   from {
-    transform: scaleY(0);
+    transform: scaleY(0.8);
+    opacity: 0;
   }
   to {
     transform: scaleY(1);
+    opacity: 1;
   }
 }
 
@@ -541,6 +575,16 @@ iframe:active {
 }
 /* styling for the fourth section */
 
+/* .learn-more {
+  padding-top: 5vh;
+} */
+
+.learn-more {
+  height: 100vh;
+  /* padding-top: 10vh; */
+  /* border: 2px solid hotpink; */
+}
+
 .text-wrapper-purple {
   background-color: var(--color-primary);
   color: white;
@@ -555,4 +599,7 @@ iframe:active {
 
 .learn-more > h2 {
   text-align: center;
+}
+.wrapper-hover > img {
+  object-fit: cover;
 }

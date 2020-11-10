@@ -53,6 +53,7 @@ h4 {
     background-color: var(--bg-light-gray);
     padding: 2em;
     margin: 0;
+    
     display: none;
     cursor: pointer;
 }
@@ -88,16 +89,16 @@ h4 {
 
 .appearing {
     display:block;
-    animation: appearing 0.3s ease-out forwards;
+    animation: appearing 0.3s linear forwards;
     transform-origin: top center;
 }
 
 @keyframes appearing {
     from {
-        transform: scaleY(0);
+        height: 12vh;
     }
 
     to {
-        transform: scaleY(1);
+        height: 17.5vh;
     }
 }

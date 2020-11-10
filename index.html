@@ -224,12 +224,12 @@
           <div class="form-content">
             <div class="flex">
               <div class="textbox-div">
-                <label for="fname">Fornavn<span class="required">*</span></label>
-                <input class="narrow" type="text" id="fname" name="fname" required minlength="3" />
+                <label for="first_name">Fornavn<span class="required">*</span></label>
+                <input class="narrow" type="text" id="first_name" name="first_name" required minlength="3" />
               </div>
               <div class="textbox-div">
-                <label for="lname">Efternavn<span class="required">*</span></label>
-                <input class="narrow" type="text" id="lname" name="lname" required minlength="3" />
+                <label for="last_name">Efternavn<span class="required">*</span></label>
+                <input class="narrow" type="text" id="last_name" name="last_name" required minlength="3" />
               </div>
             </div>
             <div class="textbox-div">
@@ -503,6 +503,13 @@
               <label for="extra_info">Besked</label>
               <textarea class="medium" id="extra_info" name="extra_info" rows="4" cols="50"></textarea>
             </div>
+            <div class="textbox-div">
+              <div class="flex">
+                <input class="checkbox" type="checkbox" id="terms" name="terms" required />
+              <label class="check-label" for="terms">Ja tak, du må gerne e-maile mig og behandle mine data med markedsføringsformål.
+                (Læs mere)<span class="required">*</span></label>
+            </div>
+            </div>
             <input class="btn btn-primary" type="submit" value="Submit" />
           </div>
         </form>
@@ -519,5 +526,6 @@
         <a class="link link-hover-border no-border" href="/cr?ref=dhpbb_au">Corporate Responsibility</a>
     </div> -->
   </body>
-  <script src="script.js"></script>
+  <script src="script-chat.js"></script>
+  <script src="script-form.js"></script>
 </html>

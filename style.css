@@ -151,8 +151,7 @@ h6,
   font-size: 1rem;
   line-height: 187.5%;
   border-radius: 0;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -755,6 +754,7 @@ select {
   outline: none;
   transition: linear 0.2s;
   width: 25vw;
+  cursor: pointer;
 }
 
 select:hover {
@@ -763,4 +763,17 @@ select:hover {
 
 option {
   background-color: #fff;
+}
+
+/* CHECKBOX */
+
+.check-label {
+  margin: 0;
+  margin-left: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  align-self: center;
 }

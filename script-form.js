@@ -3,6 +3,8 @@ const endpoint = "https://newdxc-e2c4.restdb.io/rest/contactdata";
 
 _GET();
 
+//DB
+
 function _GET() {
     fetch(endpoint, {
         method: "get",
@@ -37,11 +39,14 @@ function _POST(data) {
     });
 }
 
-const form = document.querySelector("form");
-
 function showData(list) {
     console.log(list);
 }
+
+// FORM
+
+const form = document.querySelector("form");
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -72,20 +77,7 @@ form.addEventListener("submit", (e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// MODAL
 
 const modalDiv = document.querySelector("#form-modal");
 

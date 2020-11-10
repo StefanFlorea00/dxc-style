@@ -76,7 +76,16 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.no-dec {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 /* TEXT */
@@ -221,6 +230,11 @@ h6,
   background-color: gray;
   animation: chat-box-anim 0.3s ease-out;
   transform-origin: center;
+}
+
+.chat-box input[type="text"],
+.chat-box input[type="text"]:hover {
+  background-color: #fff;
 }
 
 .chat-bar {
@@ -581,7 +595,7 @@ iframe:active {
   margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 60%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -602,7 +616,7 @@ iframe:active {
 /* FORM */
 
 form {
-  width: 80%;
+  width: 30vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -611,31 +625,19 @@ form {
   margin-bottom: 50px;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex > div {
+  margin-right: 5vw;
+}
+
+.space-around {
+  justify-content: space-between;
+}
+
 /* INPUT */
-/* 
-input:invalid {
-  background-color: var(--invalid-color);
-}
-
-input:hover:invalid {
-  background-color: var(--invalid-color-hover);
-} */
-
-input:valid {
-  background-color: var(--valid-color);
-}
-
-input:hover:valid {
-  background-color: var(--valid-color-hover);
-}
-
-input[type="submit"] {
-  background-color: var(--primary-color);
-}
-
-input[type="submit"]:hover {
-  background-color: var(--primary-color-hover);
-}
 
 /* TEXTBOX */
 
@@ -643,15 +645,10 @@ input[type="submit"]:hover {
   display: grid;
   grid-template-columns: 1/1;
   margin-bottom: 30px;
-  width: 25vw;
-}
-
-.wide {
-  width: 30vw;
 }
 
 .required {
-  color: rgb(252, 74, 74);
+  color: #fc4a4a;
   margin-left: 5px;
 }
 
@@ -660,7 +657,8 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   background-color: lightgray;
   font-size: 15px;
   border: 0;
@@ -670,18 +668,47 @@ input[type="text"] {
   color: #000;
   outline: none;
   transition: linear 0.2s;
-  width: 25vw;
+}
+
+.narrow {
+  width: 12.5vw;
+}
+
+.medium {
+  width: 30vw;
+}
+
+.wide {
+  width: 45vw;
 }
 
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="text"]:hover {
-  background-color: gray;
+  background-color: #e4e4e4;
 }
 
-#age {
-  width: 12.5vw;
+input[type="email"]:active,
+input[type="email"]:focus,
+input[type="email"]:hover {
+  background-color: #e4e4e4;
 }
+
+input:invalid:focus {
+  background-color: #dd8e8e;
+}
+
+input:hover:invalid:focus {
+  background-color: #f1b5b5;
+}
+
+/* input:valid {
+  background-color: var(--valid-color);
+}
+
+input:hover:valid {
+  background-color: var(--valid-color-hover);
+} */
 
 /*TEXTAREA */
 
@@ -694,18 +721,17 @@ textarea {
   outline: none;
   color: #000;
   font-size: 15px;
-  width: 25vw;
   transition: 0.2s background-color linear;
-  max-width: 25vw;
-  max-height: 25vh;
-  min-height: 5vh;
-  min-width: 25vw;
+  max-width: 30vw;
+  max-height: 30vh;
+  min-height: 10vh;
+  min-width: 30vw;
 }
 
 textarea:active,
 textarea:focus,
 textarea:hover {
-  background-color: gray;
+  background-color: #e4e4e4;
 }
 
 /* SUBMIT */
@@ -713,9 +739,8 @@ textarea:hover {
 input[type="submit"] {
   display: block;
   background-color: var(--color-primary);
+  margin-top: 50px;
   width: 200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* SELECT */

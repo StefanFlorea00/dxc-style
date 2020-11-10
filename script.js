@@ -59,21 +59,25 @@ function userSendMessage(message) {
   document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
 }
 
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
+const modalDiv = document.querySelector("#form-modal");
 
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+const modalClose = document.querySelector("#modal-close");
+modalClose.addEventListener("click", closeModal);
+window.addEventListener("click", closeModalWindow);
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+const contactBtn = document.querySelector("#contact-btn");
+contactBtn.addEventListener("click", openModal);
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+function closeModal() {
+  modalDiv.classList.add("hidden");
+}
+function closeModalWindow(e) {
+  if (e.target == modalDiv) {
+    modalDiv.classList.add("hidden");
   }
-};
+}
+
+function openModal() {
+  modalDiv.classList.remove("hidden");
+  console.log("aha");
+}

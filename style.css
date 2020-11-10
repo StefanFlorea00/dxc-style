@@ -183,18 +183,22 @@ h6,
 .chat-wrapper {
   position: sticky;
   z-index: 5;
-  bottom: 5%;
-  right: 5%;
+  bottom: 7%;
+  right: 3%;
   margin: 0;
 }
 
 .chat-bubble {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  background-color: blue;
+  height: 75px;
+  width: 75px;
+  background-color: var(--color-secondary);
+  background-image: url("picture-things/chat.png");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
   margin-left: auto;
-  margin-right: 5%;
+  margin-right: 3%;
   margin-bottom: 5%;
   cursor: pointer;
   position: relative;

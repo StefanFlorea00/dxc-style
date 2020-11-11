@@ -265,7 +265,8 @@ h6,
   align-content: center;
   width: 100%;
   height: 50px;
-  background-color: lightgray;
+  background-color: var(--color-secondary);
+  color: white;
   padding: 0 10px;
 }
 
@@ -274,7 +275,7 @@ h6,
 }
 
 .chat-close {
-  color: #aaa;
+  color: white;
   font-size: 35px;
   margin-left: auto;
   font-weight: bold;
@@ -283,7 +284,7 @@ h6,
 
 .chat-close:hover,
 .chat-close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   transform: scale(1.3);
@@ -851,7 +852,7 @@ option {
   padding: 2em;
   background-color: var(--bg-light-gray);
   width: 100%;
-  height: 50%;
+  height: 30vh;
   text-align: center;
   justify-self: end;
 }

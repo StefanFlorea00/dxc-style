@@ -1,23 +1,34 @@
-document.querySelector("#chat").addEventListener("click", showChat);
-document.querySelector("#chat-close").addEventListener("click", closeChat);
-document.querySelector("#chat-send").addEventListener("click", function () {
-  if (document.querySelector("#user-text").value != "") {
-    userSendMessage(document.querySelector("#user-text").value);
-    document.querySelector("#user-text").value = "";
-  }
-});
-document.querySelector("#user-text").addEventListener("keydown", enterText);
+"use strict";
 
-const template = document.querySelector("#chat-line").content;
+let template;
+let chatShown = false,
+userSentFirstMessage = false;
 
-let chatShown = false;
+window.addEventListener('DOMContentLoaded', init);
+
+function init(){
+  document.querySelector("#chat").addEventListener("click", showChat);
+  document.querySelector("#chat-close").addEventListener("click", closeChat);
+  document.querySelector("#chat-send").addEventListener("click", function () {
+    if (document.querySelector("#user-text").value != "") {
+      userSendMessage(document.querySelector("#user-text").value);
+      document.querySelector("#user-text").value = "";
+    }
+  });
+  document.querySelector("#user-text").addEventListener("keydown", enterText);
+
+  template = document.querySelector("#chat-line").content;
+  chatShown = false;
+
+  sendIntroMessage();
+}
 
 function sendIntroMessage() {
   botSendMessage("Hi, if you need help don't hesitate to ask!");
 }
 
 function enterText(e) {
-  if (e.keyCode == 13) {
+  if (e.keyCode == 13 && this.value!= "") {
     userSendMessage(this.value);
     this.value = "";
   }
@@ -29,7 +40,6 @@ function showChat() {
     document.querySelector(".chat-bubble").classList.add("hidden");
     chatShown = true;
   }
-  sendIntroMessage();
 }
 
 function closeChat() {
@@ -41,12 +51,14 @@ function closeChat() {
 }
 
 function botSendMessage(message) {
-  const line = template.cloneNode(true);
-  console.log(line);
-  line.querySelector("#chat-line-text").textContent = message;
-
-  document.querySelector(".chat-text").appendChild(line);
-  document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
+  setTimeout(() => {
+    const line = template.cloneNode(true);
+    console.log(line);
+    line.querySelector("#chat-line-text").textContent = message;
+  
+    document.querySelector(".chat-text").appendChild(line);
+    document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
+  }, 300);
 }
 
 function userSendMessage(message) {
@@ -57,4 +69,10 @@ function userSendMessage(message) {
 
   document.querySelector(".chat-text").appendChild(line);
   document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
+
+
+  if(!userSentFirstMessage){
+    botSendMessage("You can always check the checklist page for more information");
+    userSentFirstMessage = true;
+  }
 }

@@ -95,7 +95,16 @@ section {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.no-dec {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 /* TEXT */
@@ -161,8 +170,8 @@ h6,
   font-size: 1rem;
   line-height: 187.5%;
   border-radius: 0;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -200,11 +209,13 @@ h6,
 /* CHATBOT */
 
 .chat-wrapper {
+  display: block;
+  width: 200px;
   position: sticky;
   z-index: 5;
   bottom: 7%;
   right: 3%;
-  margin: 0;
+  margin-left: auto;
 }
 
 .chat-bubble {
@@ -238,6 +249,11 @@ h6,
   background-color: gray;
   animation: chat-box-anim 0.3s ease-out;
   transform-origin: center;
+}
+
+.chat-box input[type="text"],
+.chat-box input[type="text"]:hover {
+  background-color: #fff;
 }
 
 .chat-bar {
@@ -580,7 +596,8 @@ iframe:active {
 } */
 
 .learn-more {
-  height: 100vh;
+  /* height: 100vh; */
+  padding-top: 10vh;
   /* padding-top: 10vh; */
   /* border: 2px solid hotpink; */
 }
@@ -600,6 +617,215 @@ iframe:active {
 .learn-more > h2 {
   text-align: center;
 }
+
 .wrapper-hover > img {
   object-fit: cover;
 }
+/* MODAL */
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* FORM */
+
+form {
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-intro {
+  margin-bottom: 50px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > div {
+  margin-right: 5vw;
+}
+
+.space-around {
+  justify-content: space-between;
+}
+
+/* INPUT */
+
+/* TEXTBOX */
+
+.textbox-div {
+  display: grid;
+  grid-template-columns: 1/1;
+  margin-bottom: 30px;
+}
+
+.required {
+  color: #fc4a4a;
+  margin-left: 5px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  background-color: lightgray;
+  font-size: 15px;
+  border: 0;
+  height: 40px;
+  padding: 10px;
+  appearance: none;
+  color: #000;
+  outline: none;
+  transition: linear 0.2s;
+}
+
+.narrow {
+  width: 12.5vw;
+}
+
+.medium {
+  width: 30vw;
+}
+
+.wide {
+  width: 45vw;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="text"]:hover {
+  background-color: #e4e4e4;
+}
+
+input[type="email"]:active,
+input[type="email"]:focus,
+input[type="email"]:hover {
+  background-color: #e4e4e4;
+}
+
+input:invalid:focus {
+  background-color: #dd8e8e;
+}
+
+input:hover:invalid:focus {
+  background-color: #f1b5b5;
+}
+
+/* input:valid {
+  background-color: var(--valid-color);
+}
+
+input:hover:valid {
+  background-color: var(--valid-color-hover);
+} */
+
+/*TEXTAREA */
+
+textarea {
+  background-color: lightgray;
+  border: 0;
+  height: 10vh;
+  padding: 10px;
+  appearance: none;
+  outline: none;
+  color: #000;
+  font-size: 15px;
+  transition: 0.2s background-color linear;
+  max-width: 30vw;
+  max-height: 30vh;
+  min-height: 10vh;
+  min-width: 30vw;
+}
+
+textarea:active,
+textarea:focus,
+textarea:hover {
+  background-color: #e4e4e4;
+}
+
+/* SUBMIT */
+
+input[type="submit"] {
+  display: block;
+  background-color: var(--color-primary);
+  margin-top: 50px;
+  width: 200px;
+}
+
+/* SELECT */
+
+select {
+  background-color: lightgray;
+  font-size: 15px;
+  border: 0;
+  height: 40px;
+  padding: 10px;
+  color: #000;
+  outline: none;
+  transition: linear 0.2s;
+  width: 25vw;
+  cursor: pointer;
+}
+
+select:hover,
+select:focus {
+  background-color: #e4e4e4;
+}
+
+option {
+  background-color: #fff;
+}
+
+/* CHECKBOX */
+
+.check-label {
+  margin: 0;
+  margin-left: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  align-self: center;
+}
+
+/* CONTACT */

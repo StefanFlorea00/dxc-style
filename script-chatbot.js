@@ -58,26 +58,3 @@ function userSendMessage(message) {
   document.querySelector(".chat-text").appendChild(line);
   document.querySelector(".chat-text").scrollTop = document.querySelector(".chat-text").scrollHeight;
 }
-
-const modalDiv = document.querySelector("#form-modal");
-
-const modalClose = document.querySelector("#modal-close");
-modalClose.addEventListener("click", closeModal);
-window.addEventListener("click", closeModalWindow);
-
-const contactBtn = document.querySelector("#contact-btn");
-contactBtn.addEventListener("click", openModal);
-
-function closeModal() {
-  modalDiv.classList.add("hidden");
-}
-function closeModalWindow(e) {
-  if (e.target == modalDiv) {
-    modalDiv.classList.add("hidden");
-  }
-}
-
-function openModal() {
-  modalDiv.classList.remove("hidden");
-  console.log("aha");
-}

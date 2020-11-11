@@ -1,5 +1,9 @@
 const formCompleted = localStorage.getItem("formComplete");
-console.log(formCompleted);
+console.log("FORM:" + formCompleted);
+
+function _DELETE_LOCALSTORAGE() {
+  localStorage.clear();
+}
 
 //DB
 

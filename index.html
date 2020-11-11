@@ -238,7 +238,15 @@
             </div>
             <div class="textbox-div">
               <label for="tel">Telefonnummer<span class="required">*</span></label>
-              <input class="medium" type="text" id="tel" name="tel" required minlength="3" />
+              <input
+                class="medium"
+                type="text"
+                id="tel"
+                name="tel"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                required
+                minlength="3"
+              />
             </div>
             <div class="textbox-div">
               <label for="company">Virksomhed<span class="required">*</span></label>
@@ -530,7 +538,7 @@
         <a class="link link-hover-border no-border" href="/cr?ref=dhpbb_au">Corporate Responsibility</a>
     </div> -->
   </body>
-  <script src="script-chat.js"></script>
+  <script src="script-chatbot.js"></script>
   <script src="script-form.js"></script>
   <script src="https://kea-alt-del.dk/dxc/login.js"></script>
 </html>

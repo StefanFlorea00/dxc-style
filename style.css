@@ -604,3 +604,12 @@ iframe:active {
 .wrapper-hover > img {
   object-fit: cover;
 }
+
+.right-partner {
+  display:flex;
+  flex-flow: column;
+}
+
+.right-partner > a {
+  align-self: center;
+}
